@@ -1,0 +1,274 @@
+body {
+	--sz: 6px;
+	--c0: #4d0e83;
+	--c1: #a03ccf;
+	--c2: #c168ff;
+	--ts: 50%/ calc(var(--sz) * 30) calc(var(--sz) * 30);
+	--hide-top: conic-gradient(from 90deg at 50% 90%, var(--c0) 0 25%, #fff0 0 100%) var(--ts);
+	--hide-bot: conic-gradient(from -90deg at 50% 10%, var(--c0) 0 25%, #fff0 0 100%) var(--ts);
+	margin: 0;
+	padding: 0;
+
+	background:
+		var(--hide-top), var(--hide-top), var(--hide-top), 
+		conic-gradient(from 90deg at 50% 80%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), 
+		conic-gradient(from 90deg at 50% 70%, var(--c2) 0 25%, #fff0 0 100%) var(--ts), 
+		conic-gradient(from 90deg at 50% 60%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), 
+		conic-gradient(from 90deg at 50% 50%, var(--c0) 0 25%, #fff0 0 100%) var(--ts), 
+		var(--hide-bot), var(--hide-bot), var(--hide-bot), 
+		conic-gradient(from -90deg at 50% 20%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), 
+		conic-gradient(from -90deg at 50% 30%, var(--c2) 0 25%, #fff0 0 100%) var(--ts), 
+		conic-gradient(from -90deg at 50% 40%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), 
+		conic-gradient(from -90deg at 50% 50%, var(--c0) 0 25%, #fff0 0 100%) var(--ts), 
+		repeating-linear-gradient(90deg, var(--c0) 0 10%, var(--c1) 0 20%, var(--c2) 0 30%, var(--c1) 0 40%, var(--c0) 0 50%) var(--ts),
+		var(--c0);
+
+
+    font-family:"Comic Relief", system-ui;
+    color: aliceblue;
+   position: relative;
+}
+main{
+    position: relative;
+}
+
+nav{
+    margin-top: 5%;
+    position:relative;
+    bottom: 0;
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+    justify-content:space-around;
+}
+header{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.flag{
+    width: 100%;
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    position: relative;
+}
+.red{
+    background-color: red;
+    width: 100%;
+    height: 100px;
+}
+.white{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.vstup{
+    margin-top: 5%;
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: space-evenly;
+   	-webkit-text-stroke: 1px white;
+
+}
+
+.vstup img{
+    width:30%
+}
+.vstup p{
+    width:40%;
+}
+.ytw{
+    color: aquamarine;
+    
+    text-align: center;
+}
+.card{
+    display: flex ;
+    justify-content: space-around;
+   text-align: center;
+   position: relative;
+   margin-top: 20px;
+   font-size: 40px;
+
+}
+.card p{
+    width: 35%;
+}
+.card:hover p{
+    box-shadow: 5px 4px 6px 3px;
+    transition: 1s;
+}
+.vida{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 5px 7px 6px black;
+
+}
+.eye:hover{
+    box-shadow: 6px 7px 5px 8px;
+    transition: 1.5s;
+}
+
+
+/*  */
+.box {
+	display: flex;
+    position: absolute;
+    top:0;
+    left: 20%;
+}
+
+.box .inner {
+	width: 400px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 4em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: indianred;
+	color: darkred;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: lightcoral;
+	color: antiquewhite;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+/*  */
+.eat{
+    background-color: aliceblue;
+    width: 60%;
+    margin-left: 15%;
+    position: relative;
+    padding: 10%;
+}
+.front img{
+    width: 40%;
+}
+.front{
+    width: 100%;
+
+    color: #000;
+    display: flex;
+}
+.back{
+    width: 100%;
+    color: #000;
+    position: absolute;
+    top: 300px;
+   
+}
+.front:hover img{
+    opacity: 0;
+    transition: 2s;
+}
+.front:hover~.back p{
+    opacity: 1;
+    transition: 2s;
+}
+.back p{
+ width:25%  ;
+text-align: center;
+font-size: clamp(0.875rem, 2vw - 0.5rem, 1,5rem);
+position: relative;
+left: 1%;
+bottom: 120px;
+opacity: 0;
+
+
+}
+.front p{
+  font-size: 20px;
+  text-align: center;
+}
+/* index */
+@font-face {
+  font-family: "WHOA Spine Minimum";
+  src: url("https://assets.codepen.io/174183/WHOA-Variable-Spine-v0.3.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WHOA Top Minimum";
+  src: url("https://assets.codepen.io/174183/WHOA-Variable-Top-v0.3.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.indexH {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+
+}
+
+.indexH span {
+  display: block;
+  cursor: url("https://assets.codepen.io/174183/spiral_1.png"), auto;
+  font-family: "WHOA Top Minimum";
+  font-variation-settings: "hrzn" 0, "vert" 0, "rota" 0, "zoom" 0;
+  font-weight: normal;
+  font-size: clamp(10rem, 106.7vw - 36.7rem, 20rem);
+  position: relative;
+  line-height: 0.5;
+  margin: 0 0 0 1rem;
+}
+
+.indexH span::before {
+  content: "Poland";
+  font-family: "WHOA Spine Minimum";
+  font-variation-settings: "hrzn" 0, "vert" 0, "rota" 0, "zoom" 0;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+text-align: center;
+}
+
+.indexH span:hover,
+.indexH span:hover::before {
+  font-variation-settings: "hrzn" 820, "vert" -1000, "rota" 59, "zoom" 820;
+  transition: all 1000ms cubic-bezier(0.42, 0, 0.11, 1.43);
+}
+
+.indexH span:hover {
+  -webkit-text-stroke: 1px white;
+}
+
+p {
+  max-width: 60ch;
+}
+/* second */
